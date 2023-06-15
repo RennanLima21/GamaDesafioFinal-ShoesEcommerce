@@ -19,7 +19,12 @@ function App() {
       <header>
         <nav>
           <Link to="/">Home</Link>
+          <Link to="/Produtos">Comprar</Link>
+          <input type="text" />
+        </nav>
+        <nav>
           <Link to="/carrinho">Carrinho ({itensNoCarrinho})</Link>
+          <Link to="/Login">Login</Link>
         </nav>
       </header>
     </div>
