@@ -9,14 +9,14 @@ import { Carrinho } from "./pages/Carrinho";
 
 export const Router = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Inicio />} />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/LoginEmail" element={<LoginEmail />} />
-      <Route path="/Produtos" element={<Produtos />} />
-      <Route path="/Produto" element={<Produto />} />
-      <Route path="/PainelAdm" element={<PainelAdm />} />
-      <Route path="/Carrinho" element={<Carrinho />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/LoginEmail" element={<LoginEmail />} />
+        <Route path="/Produtos" element={<Produtos />} />
+        <Route path="/Produto" element={<Produto />} />
+        <Route path="/PainelAdm" element={<PainelAdm />} />
+        <Route path="/Carrinho" element={<Carrinho />} />
+      </Routes>
   );
 };

@@ -1,0 +1,58 @@
+{
+    "produtos":[
+        {
+            "id":"1",
+            "nome":"Nike Air",
+            "preco":1999.99,
+            "foto":"https://localhost:3000/image/nike_air.png",
+            "descricao":"O estilo rebelde dos anos 90 é remasterizado. Detalhes robustos, incluindo região dos dedos reforçada e estrutura de plástico durável, elevam sua atitude com uma vibe inspirada na vida ao ar livre. E, para mais estabilidade, atualizamos a sua experiência Tuned Air com a inovadora entressola Crater Foam.",
+            "categoria":"Casual",
+            "tamanho":"41"
+        },
+        {
+            "id":"2",
+            "nome":"Nike Sox",
+            "preco":999.99,
+            "foto":"https://localhost:3000/image/nike_air.png",
+            "descricao":"O estilo rebelde dos anos 90 é remasterizado. Detalhes robustos, incluindo região dos dedos reforçada e estrutura de plástico durável, elevam sua atitude com uma vibe inspirada na vida ao ar livre. E, para mais estabilidade, atualizamos a sua experiência Tuned Air com a inovadora entressola Crater Foam.",
+            "categoria":"Casual",
+            "tamanho":"41"
+        },
+        {
+            "id":"3",
+            "nome":"Nike Ultra Air",
+            "preco":7999.99,
+            "foto":"https://localhost:3000/image/nike_air.png",
+            "descricao":"O estilo rebelde dos anos 90 é remasterizado. Detalhes robustos, incluindo região dos dedos reforçada e estrutura de plástico durável, elevam sua atitude com uma vibe inspirada na vida ao ar livre. E, para mais estabilidade, atualizamos a sua experiência Tuned Air com a inovadora entressola Crater Foam.",
+            "categoria":"Casual",
+            "tamanho":"41"
+        },
+        {
+            "id":"4",
+            "nome":"Nike Air Jordan",
+            "preco":199999.99,
+            "foto":"https://localhost:3000/image/nike_air.png",
+            "descricao":"O estilo rebelde dos anos 90 é remasterizado. Detalhes robustos, incluindo região dos dedos reforçada e estrutura de plástico durável, elevam sua atitude com uma vibe inspirada na vida ao ar livre. E, para mais estabilidade, atualizamos a sua experiência Tuned Air com a inovadora entressola Crater Foam.",
+            "categoria":"Casual",
+            "tamanho":"41"
+        },
+        {
+            "id":"5",
+            "nome":"Nike Air Pobre",
+            "preco":99.99,
+            "foto":"https://localhost:3000/image/nike_air.png",
+            "descricao":"O estilo rebelde dos anos 90 é remasterizado. Detalhes robustos, incluindo região dos dedos reforçada e estrutura de plástico durável, elevam sua atitude com uma vibe inspirada na vida ao ar livre. E, para mais estabilidade, atualizamos a sua experiência Tuned Air com a inovadora entressola Crater Foam.",
+            "categoria":"Casual",
+            "tamanho":"41"
+        },
+        {
+            "id":"6",
+            "nome":"Havaiana de Pau",
+            "preco":1999999999.99,
+            "foto":"https://localhost:3000/image/nike_air.png",
+            "descricao":"O estilo rebelde dos anos 90 é remasterizado. Detalhes robustos, incluindo região dos dedos reforçada e estrutura de plástico durável, elevam sua atitude com uma vibe inspirada na vida ao ar livre. E, para mais estabilidade, atualizamos a sua experiência Tuned Air com a inovadora entressola Crater Foam.",
+            "categoria":"Casual",
+            "tamanho":"41"
+        }
+    ]
+}

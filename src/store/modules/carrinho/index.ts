@@ -3,16 +3,7 @@
  */
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-
-interface Produto{
-    id:string;
-    nome:string;
-    preço:number;
-    foto:string;
-    descricao:string;
-    categoria:string;
-    tamanho:string;
-}
+import { Produto } from "../../../types/Produto";
 
 interface EstadoCarrinho {
   carrinho: Produto[];
@@ -27,7 +18,13 @@ export const carrinhoSlice = createSlice({
   initialState,
   reducers: {
     adicionarProduto: (state, action: PayloadAction<Produto>) => {
-      state.carrinho = [...state.carrinho, action.payload];
+      const produtoNoCarrinho = state.carrinho.some(produto => produto.id ===action.payload.id);
+      if(produtoNoCarrinho){
+        alert("Este produto já está no carrinho!");
+      }
+      else{
+        state.carrinho = [...state.carrinho, action.payload];
+      }
     },
     excluirProduto: (state, action: PayloadAction<string>) => {
         const idProduto = action.payload;
