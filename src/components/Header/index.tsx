@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { RootState } from 'store';
 import { useAppSelector } from 'hooks';
-import logo from "assets/images/logo.png"
+import logo from "assets/images/logo1.png"
 import './header.css'
 
 const Header = () => {
