@@ -4,7 +4,7 @@
 
 export const Inicio = () => {
   return (
-    <div>
+    <div className="footer">
       <strong>Nossas novidades</strong>
     </div>    
   );
