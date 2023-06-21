@@ -1,7 +1,3 @@
-/**
- * Adicionado por Lívia Alcântara da Silva
- * 
- */
 import { useAppDispatch } from "../../hooks";
 import { adicionarProduto } from "../../store/modules/carrinho";
 
@@ -14,6 +10,8 @@ export const CardProduto = (props: Produto)=>{
     return(
         <div>
             <div>{props.nome}</div>
+            <div>{props.categoriaId}</div>
+            <div>{props.descricao}</div>
             <div>{props.preco}</div>
             <button onClick={()=> dispatch(adicionarProduto(props))}>
                 Adicionar produto</button>

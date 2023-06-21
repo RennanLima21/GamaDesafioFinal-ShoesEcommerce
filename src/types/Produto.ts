@@ -3,11 +3,11 @@
  * 
  */
 export interface Produto{
-    id:string;
-    nome:string;
-    preco:number;
-    foto:string;
-    descricao:string;
-    categoria:string;
-    tamanho:string;
+    id: number;
+    nome: string;
+    descricao: string;
+    foto: string;
+    preco: number;
+    quantidade: number;
+    categoriaId: number;
 }

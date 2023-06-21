@@ -26,7 +26,7 @@ export const carrinhoSlice = createSlice({
         state.carrinho = [...state.carrinho, action.payload];
       }
     },
-    excluirProduto: (state, action: PayloadAction<string>) => {
+    excluirProduto: (state, action: PayloadAction<number>) => {
         const idProduto = action.payload;
         const novoCarrinho = state.carrinho.filter((produto)=>produto.id !== idProduto);
         state.carrinho = novoCarrinho;

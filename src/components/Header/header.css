@@ -5,11 +5,15 @@
   padding: 0 1rem;
 }
 
-img {
+.img-logo {
   max-width: 300px;
   padding-left: 3rem;
   display: flex;
   justify-content: flex-start;
+}
+
+.img-carrinho {
+  max-width: 30px;
 }
 
 .container-nav {
