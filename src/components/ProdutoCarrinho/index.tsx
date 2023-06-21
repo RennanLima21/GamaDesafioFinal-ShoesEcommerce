@@ -8,9 +8,20 @@ export const ProdutoCarrinho = (props: Produto) => {
 
     return (
         <div className="card-carrinho">
-            <strong>{props.nome}</strong>
-            <span>{props.preco}</span>
-            <button onClick={()=>{dispatch(excluirProduto(props.id))}}>Remover produto</button>
+            <div>
+                <strong>{props.nome}</strong>
+                <span>
+                    {
+                        props.preco
+                            .toFixed(2)
+                            .replace('.',',')
+                            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                    }
+                </span>
+            </div>
+            <div>
+                <button onClick={()=>{dispatch(excluirProduto(props.id))}}>Remover produto</button>
+            </div>
         </div>
     );
 }

@@ -3,7 +3,9 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  gap: 1rem;
   background: rgba(0, 0, 0, 0.905);
+  justify-content: space-evenly;
   color: white;  
 }
 .card-carrinho {
@@ -12,9 +14,14 @@
   border-radius: 0.5rem;
   box-shadow: 3px 3px 5px 0px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background: #5d5d5d;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.905);
   color: white;
+}
+
+.card-carrinho div{
+  display: flex;
+  flex-direction: column;
 }
