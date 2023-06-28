@@ -1,0 +1,35 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-container span {
+  color: black;
+  padding: 0 .2rem;
+  background-color: aquamarine;
+}
+
+.home-container p {
+  margin-bottom: 1.5rem;
+  color: rgb(43, 42, 42);
+  font-size: 1.3rem;
+}
+
+.home-container img{
+  width: 350px;
+  margin: 2rem 0;
+}
+.btn-inicio{
+  background-color: black;
+  color: white;
+  
+}
