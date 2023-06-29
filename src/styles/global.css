@@ -6,4 +6,5 @@
 /* fazer componente para foter travar em baixo */
 .footer {
   min-height: calc(100vh - 108.8px - 229px);
+  background-color:rgba(33,33,33,255) ;
 }

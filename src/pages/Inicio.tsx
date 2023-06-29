@@ -9,7 +9,7 @@ export const Inicio = () => {
           Bem-vindo ao <span>gama.Shoes</span>
         </h1>
         <p>Comece a pisar com estilo gama de ser.</p>
-        <a href="/">
+        <a href="/Produtos">
           <button className="btn-inicio">Ver Produtos gama</button>
         </a>
         <div className="carousel">

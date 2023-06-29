@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
 
-import './footer.css'
+import './footer.css';
 
 const Footer = () => {
   return (
@@ -33,10 +33,9 @@ const Footer = () => {
         </div>
         <div className="footer-content">
           <h3 className="footer-title">Social</h3>
-
           <SiGithub className="social" />
           <SiInstagram className="social" />
-          <SiLinkedin className="social"/>
+          <SiLinkedin className="social" />
         </div>
       </div>
       <p className="footer-copy">&#169; 2023 Grupo 3. All right reserved</p>

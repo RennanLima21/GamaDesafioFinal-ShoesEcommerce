@@ -8,28 +8,50 @@
 }
 
 .home-container h1 {
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .home-container span {
-  color: black;
-  padding: 0 .2rem;
-  background-color: aquamarine;
+  color: white;
+  padding: 0 0.2rem;
 }
 
 .home-container p {
   margin-bottom: 1.5rem;
-  color: rgb(43, 42, 42);
+  color: white;
   font-size: 1.3rem;
 }
 
-.home-container img{
+.home-container img {
   width: 350px;
   margin: 2rem 0;
 }
-.btn-inicio{
-  background-color: black;
-  color: white;
-  
+
+.btn-inicio {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.btn-inicio:hover,
+:focus {
+  color: #ffffff;
+  background: rgb(242, 95, 29);
+  border: 1px solid rgb(242, 95, 29);
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px rgb(242, 95, 29), 0 0 20px rgb(242, 95, 29),
+    0 0 50px rgb(242, 95, 29), 0 0 100px rgb(242, 95, 29);
+  font-size: 16px;
+  border-color: transparent;
 }

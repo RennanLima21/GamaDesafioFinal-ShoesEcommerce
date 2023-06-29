@@ -1,5 +1,5 @@
 .container-header {
-  background-color: black;
+  background-color: #171717;
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -23,13 +23,26 @@
   column-gap: 1.5rem;
 }
 
-.link-header {
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: white;
-  padding: 4px 8px;
+.btn {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
 }
-.link-header:hover {
-  background-color: rgb(242, 95, 29);
-  border-radius: 10px;
+
+.btn:hover,
+:focus {
+  color: #ffffff;
+  background: rgb(242, 95, 29);
+  border: 1px solid rgb(242, 95, 29);
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px rgb(242, 95, 29), 0 0 20px rgb(242, 95, 29), 0 0 50px rgb(242, 95, 29), 0 0 100px rgb(242, 95, 29);
 }
