@@ -1,14 +1,15 @@
 
 import {FormEvent, useState} from 'react'
 import logoimg from '../assets/logo.png';
+import axios from 'axios';
 import "../styles/loginemail.css";
 
 
 export const Login = () => {
   const [email, setEmail] = useState("")
   const [senha, setSenha] = useState("")
-  const [erroEmail, setErroEmail ] = useState("")
-  const [erroSenha, setErroSenha] = useState("")
+    const [erroEmail, setErroEmail ] = useState("")
+    const [erroSenha, setErroSenha] = useState("")
 function logaUsuario (evento:FormEvent){
   evento.preventDefault()
   if(! email ){
@@ -16,6 +17,18 @@ function logaUsuario (evento:FormEvent){
   }
   if(! senha ){
     setErroSenha ('Por favor insira a Senha')
+  }
+
+   // Fazer a chamada para a API aqui
+   if (email && senha) {
+    axios.post('https://gamashoes-production.up.railway.app', { email, senha })
+      .then(response => {
+        // Faça algo com a resposta da API
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 
 } 
@@ -66,7 +79,7 @@ function logaUsuario (evento:FormEvent){
             </div>
 
             <div className='texto-central'>
-              <a className='txt1' href='#'>Criar Conta</a>
+              <a className='txt1' href='formulario'>Criar Conta</a>
             </div>
 
           </form>

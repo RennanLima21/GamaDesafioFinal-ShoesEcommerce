@@ -63,8 +63,7 @@
   margin-top: 1rem;
 }
 
-.btn:hover,
-:focus {
+.btn:hover{
   color: #ffffff;
   background: rgb(242, 95, 29);
   border: 1px solid rgb(242, 95, 29);
