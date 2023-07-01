@@ -2,7 +2,7 @@
  * Adicionado por Lívia Alcântara da Silva
  * 
  */
-export interface Produto{
+export interface IProduto{
     id: number;
     nome: string;
     descricao: string;

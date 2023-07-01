@@ -1,20 +1,22 @@
-import { useAppDispatch } from "../../hooks";
-import { adicionarProduto } from "../../store/modules/carrinho";
+import { IProduto } from "../../types/IProduto";
+import "./cardProduto.css";
+import { Link } from "react-router-dom";
 
-import { Produto } from "../../types/Produto";
-
-export const CardProduto = (props: Produto)=>{
+export const CardProduto = (props: IProduto)=>{
 //export const CardProduto = ({ id, nome, preco, foto, descricao, categoria, tamanho }: Produto)=>{
-    const dispatch = useAppDispatch();
-
     return(
-        <div>
+        <div className="card-produtos">
+
             <div>{props.nome}</div>
             <div>{props.categoriaId}</div>
             <div>{props.descricao}</div>
             <div>{props.preco}</div>
-            <button onClick={()=> dispatch(adicionarProduto(props))}>
-                Adicionar produto</button>
+            <Link to={`/Produto/${props.id}`}>
+				<div className="btn-produtos">Detalhes</div>
+			</Link>
         </div>
+
     );
 };
+        /*<button onClick={()=> dispatch(adicionarProduto(props))}>
+        Detalhes</button>*/

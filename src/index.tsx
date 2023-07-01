@@ -1,7 +1,3 @@
-/**
- * Alterado por Lívia Alcântara da Silva
- * 
- */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";

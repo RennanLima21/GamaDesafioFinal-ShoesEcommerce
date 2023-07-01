@@ -1,8 +1,9 @@
 
 import {FormEvent, useState} from 'react'
-import logoimg from '../assets/logo.png';
+import logoimg from '../assets/images/logo1.png';
 import axios from 'axios';
 import "../styles/loginemail.css";
+import { Link } from 'react-router-dom';
 
 
 export const Login = () => {
@@ -78,8 +79,8 @@ function logaUsuario (evento:FormEvent){
               <button className='login-form-btn'>Entrar</button>
             </div>
 
-            <div className='texto-central'>
-              <a className='txt1' href='formulario'>Criar Conta</a>
+            <div className='container-login-form-btn'>
+              <Link to="/Formulario">Criar Conta</Link>
             </div>
 
           </form>
@@ -88,5 +89,3 @@ function logaUsuario (evento:FormEvent){
     </div>
   );
 };
-
-

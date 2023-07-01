@@ -1,4 +1,5 @@
-import logo from 'assets/images/logo1.png';
+import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo1.png';
 import '../styles/inicio.css';
 
 export const Inicio = () => {
@@ -9,12 +10,12 @@ export const Inicio = () => {
           Bem-vindo ao <span>gama.Shoes</span>
         </h1>
         <p>Comece a pisar com estilo gama de ser.</p>
-        <a href="/Produtos">
+        <Link to={"/Produtos"}>
           <button className="btn-inicio">Ver Produtos gama</button>
-        </a>
+        </Link>
         <div className="carousel">
           <div className="item">
-            <img src="" alt="Shoe" />
+            <img src={logo} alt="Shoe" />
           </div>
           <div className="info">
             <span className="name">Shuper Shoe1</span>

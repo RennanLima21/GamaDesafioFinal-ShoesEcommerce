@@ -2,30 +2,27 @@
  * 
  */
 import { CardProduto } from "../components/CardProduto";
-import listaProdutos from '../produtos.json';
 import { api } from "lib/axios";
-import { Produto } from "types/Produto";
 import React, { useEffect, useState } from "react";
+import "../styles/produtos.css";
 
   
 export const Produtos = () => {
-    const [post, setPost] = useState<any[]>([]);
+    const [produtos, setProdutos] = useState<any[]>([]);
     useEffect(() => {
       api.get("/produto/").then((data) => {
         console.log(data);
-        setPost(data?.data);
+        setProdutos(data?.data);
       });
     }, []);
     return(
-    <div>
-      <div>
+    <div className="container-produtos">
       Produtos
         {
-          post.map((produto,i) =>(
+          produtos.map((produto,i) =>(
             <CardProduto key={i} {...produto}/>
           ))
         }
-      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Formulario } from "./pages/Formulario";
+import { Formulario } from "../../pages/Formulario";
 
 const OutraPagina = () => {
   return (
