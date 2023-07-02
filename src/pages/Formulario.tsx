@@ -23,15 +23,17 @@ export const Formulario = () => {
     const autenticarUsuario = async () => {
       setFazendoCadastro(true);
       try {
-        const response = await api.post("/usuario/", {
+        const response = await api.post(`/usuario`, {
           name: nomeCompleto,
           email: email,
           senha: senha,
           isAdmin: false,
-          }, {headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-            "Access-Control-Allow-Headers": "content-type"
+          }
+          , {headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            'Access-Control-Allow-Headers': 'content-type',
+            'content-type':'application/json'
           }}
         );
         const data = await response.data;

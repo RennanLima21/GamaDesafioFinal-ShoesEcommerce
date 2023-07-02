@@ -8,3 +8,10 @@ export interface ICompra{
     categoriaId: number;
     qtdeDesejada: number;
 }
+
+export interface IPedido {
+    id: number;
+    idUsuario: number;
+    idProduto: number;
+    quantidadePedido: number;
+  }
