@@ -16,7 +16,17 @@ export const Inicio = () => {
         <p>Comece a pisar com estilo gama de ser.</p>
         <Link to={'/Produtos'}>
           <button className="btn-inicio">Ver Produtos gama</button>
-        </Link>
+        </Link>  
+              <div className="c-container">
+                <div className="carousel">
+                  <div className="image">
+                  <img className='image-img' src={image1} alt="" />
+                  <img className='image-img' src={image2} alt="" />
+                  <img className='image-img' src={image3} alt="" />
+                  <img className='image-img' src={image4} alt="" />
+                  </div>
+                </div>
+              </div>
       </section>
     </div>
   );

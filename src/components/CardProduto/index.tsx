@@ -1,22 +1,27 @@
-import { IProduto } from "../../types/IProduto";
-import "./cardProduto.css";
-import { Link } from "react-router-dom";
+import { IProduto } from '../../types/IProduto';
+import { Link } from 'react-router-dom';
 
-export const CardProduto = (props: IProduto)=>{
-//export const CardProduto = ({ id, nome, preco, foto, descricao, categoria, tamanho }: Produto)=>{
-    return(
-        <div className="card-produtos">
+import './cardProduto.css';
 
-            <div>{props.nome}</div>
-            <div>{props.categoriaId}</div>
-            <div>{props.descricao}</div>
-            <div>{props.preco}</div>
-            <Link to={`/Produto/${props.id}`}>
-				<div className="btn-produtos">Detalhes</div>
-			</Link>
-        </div>
-
-    );
+export const CardProduto = (props: IProduto) => {
+  //export const CardProduto = ({ id, nome, preco, foto, descricao, categoria, tamanho }: Produto)=>{
+  return (
+    <div className="card">
+      <div className="content">
+        <div className="title">{props.nome}</div>
+        <div className="price">{props.preco}</div>
+        <div className="description">{props.descricao}</div>
+      </div>
+      <button className="btn_card">
+        <Link to={`/Produto/${props.id}`}>
+          <div className="btn-produtos">Detalhes</div>
+        </Link>
+      </button>
+    </div>
+  );
 };
-        /*<button onClick={()=> dispatch(adicionarProduto(props))}>
-        Detalhes</button>*/
+
+{
+  /* <button onClick={()=> dispatch(adicionarProduto(props))}>
+        Detalhes</button> */
+}

@@ -86,6 +86,6 @@ function logaUsuario (evento:FormEvent){
           </form>
         </div>
       </div>
-    </div>
+    </div>    
   );
 };

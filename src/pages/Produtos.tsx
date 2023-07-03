@@ -23,6 +23,7 @@ export const Produtos = () => {
             <CardProduto key={i} {...produto}/>
           ))
         }
+        
     </div>
   );
 }
