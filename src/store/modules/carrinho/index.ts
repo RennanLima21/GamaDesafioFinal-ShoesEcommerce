@@ -1,6 +1,4 @@
-/**
- * Criado por Lívia Alcântara da Silva Santana
- */
+
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import {ICompra} from "../../../types/ICompra";
@@ -37,7 +35,6 @@ export const carrinhoSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { adicionarProduto, excluirProduto, esvaziarCarrinho } = carrinhoSlice.actions;
 
 export default carrinhoSlice.reducer;

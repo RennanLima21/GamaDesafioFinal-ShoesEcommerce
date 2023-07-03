@@ -14,4 +14,4 @@ export interface IPedido {
     idUsuario: number;
     idProduto: number;
     quantidadePedido: number;
-  }
+}

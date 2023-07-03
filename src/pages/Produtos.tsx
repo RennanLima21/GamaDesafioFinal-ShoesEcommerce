@@ -1,6 +1,4 @@
-/**Alterado por Lívia Alcântara da Silva
- * 
- */
+
 import { CardProduto } from "../components/CardProduto";
 import { api } from "lib/axios";
 import React, { useEffect, useState } from "react";

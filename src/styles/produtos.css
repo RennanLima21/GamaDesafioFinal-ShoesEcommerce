@@ -9,6 +9,7 @@
   justify-content: space-evenly;
   color: white;
 }
+
 .card-produtos {
   border: 1px;
   border-color: gray;
@@ -41,8 +42,7 @@
   user-select: none;
 }
 
-.btn-produto:hover,
-:focus {
+.btn-produto:hover,:focus {
   color: #ffffff;
   background: rgb(242, 95, 29);
   border: 1px solid rgb(242, 95, 29);

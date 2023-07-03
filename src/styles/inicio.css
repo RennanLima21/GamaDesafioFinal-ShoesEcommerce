@@ -60,8 +60,8 @@
   display: flex;
   overflow: auto;
   scroll-behavior: smooth;
-
 }
+
 .image{
   width: 100%;
   max-width: 1200px;

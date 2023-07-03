@@ -1,7 +1,3 @@
-/**
- * Alterado por Lívia Alcântara da Silva
- *
- */
 import { Router } from './Router';
 import { BrowserRouter } from 'react-router-dom';
 import './styles/global.css';

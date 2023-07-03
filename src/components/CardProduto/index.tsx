@@ -21,7 +21,3 @@ export const CardProduto = (props: IProduto) => {
   );
 };
 
-{
-  /* <button onClick={()=> dispatch(adicionarProduto(props))}>
-        Detalhes</button> */
-}

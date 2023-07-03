@@ -19,6 +19,7 @@
     padding: 1rem;
     gap: 1rem;
 }
+
 .descricao-produto{
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@
     justify-content: space-evenly;
     color: white;
 }
+
 .btn-produto {
     padding: 10px 20px;
     border-radius: 8px;
@@ -42,8 +44,7 @@
     user-select: none;
   }
   
-.btn-produto:hover,
-  :focus {
+.btn-produto:hover,:focus {
     color: #ffffff;
     background: rgb(242, 95, 29);
     border: 1px solid rgb(242, 95, 29);

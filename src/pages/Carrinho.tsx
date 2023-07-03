@@ -1,6 +1,3 @@
-/**Alterado por Lívia Alcântara da Silva
- * 
- */
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { RootState } from "../store";
 import { ProdutoCarrinho } from "../components/ProdutoCarrinho";
