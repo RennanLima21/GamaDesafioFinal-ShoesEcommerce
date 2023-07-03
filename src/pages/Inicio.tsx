@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/logo1.png';
 import '../styles/inicio.css';
+
+import image1 from '../assets/images/carousel/foto1.png';
+import image2 from '../assets/images/carousel/foto2.jpg';
+import image3 from '../assets/images/carousel/foto3.jpeg';
+import image4 from '../assets/images/carousel/foto4.jpg';
 
 export const Inicio = () => {
   return (
@@ -10,19 +14,9 @@ export const Inicio = () => {
           Bem-vindo ao <span>gama.Shoes</span>
         </h1>
         <p>Comece a pisar com estilo gama de ser.</p>
-        <Link to={"/Produtos"}>
+        <Link to={'/Produtos'}>
           <button className="btn-inicio">Ver Produtos gama</button>
         </Link>
-        <div className="carousel">
-          <div className="item">
-            <img src={logo} alt="Shoe" />
-          </div>
-          <div className="info">
-            <span className="name">Shuper Shoe1</span>
-            <span className="oldPrice">R$ 299,00</span>
-            <span className="price">R$ 199,00</span>
-          </div>
-        </div>
       </section>
     </div>
   );

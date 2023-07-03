@@ -11,7 +11,9 @@ const Header = () => {
   const itensNoCarrinho = estadoCarrinho.carrinho.length;
   return (
     <header className="container-header">
-      <img className="img-logo" src={logo} alt="logo" /><MdOutlineShoppingCart className="social" />
+      <Link to="/" className="link-header">
+        <img className="img-logo" src={logo} alt="logo" />
+      </Link>
       <nav className="container-nav">
         <Link to="/" className="link-header">
           <button className="btn">Home</button>
@@ -21,8 +23,9 @@ const Header = () => {
         </Link>
         <Link to="/carrinho" className="link-header">
           {' '}
-          {' '}
-          <button className="btn"><MdOutlineShoppingCart className="img-carrinho" />({itensNoCarrinho})</button>{' '}
+          <button className="btn">
+            <MdOutlineShoppingCart className="img-carrinho" />({itensNoCarrinho})
+          </button>{' '}
         </Link>
         <Link to="/Login" className="link-header">
           <button className="btn">Login</button>
