@@ -1,14 +1,14 @@
 .footer-section {
   color: whitesmoke;
   background-color: #171717;
-  margin-top: 3rem;
+  background: #171717;
 }
 .footer-container {
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   column-gap: 1rem;
-  padding: 0 3rem;
+  padding: 3rem;
 }
 
 .footer-title {

@@ -11,6 +11,9 @@ import "../styles/carrinho.css";
 
 export const Carrinho = () => {
   const dispatch = useAppDispatch();
+  const accessToken =
+        useAppSelector((state) => state.authReducer.token) ||
+        localStorage.getItem('@desafio4-grupo3:token');
   const estadoCarrinho = useAppSelector((state: RootState)=>state.carrinhoReducer);
   const itensNoCarrinho = estadoCarrinho.carrinho.length;
   const usuario = useAppSelector((store) => store.authReducer.usuario);
@@ -33,16 +36,27 @@ export const Carrinho = () => {
       if (usuario) {
         const enviarPedido = async () => {
           try {
-            estadoCarrinho.carrinho.map(compra => ( 
-              compra.id
-            ));
-            const response = await api.post("/pedido", {
-              idUsuario: usuario.id,
-              idProduto: 1,
-              totalPedido: totalPedido,
+            estadoCarrinho.carrinho.forEach(async (compra)=>{
+              const response = await api.post("/pedido", {
+                usuarioId: usuario.id,
+                produtoId: compra.id,
+                quantidade: compra.qtdeDesejada,
+              },{
+                headers: {
+                  Authorization: 'Bearer ' + accessToken,
+                },
+              });
+              const novaQtd = compra.quantidade - compra.qtdeDesejada;
+              const resp = await api.put(`/produto/${compra.id}`, {
+                quantidade:novaQtd,
+              },{
+                headers:{
+                  Authorization: 'Bearer ' + accessToken,
+                },
+              });
             });
-  
-            navigate("/Home");
+
+            navigate("/");
             alert("Compra realizada com sucesso!");
             dispatch(esvaziarCarrinho());
           } catch (error) {

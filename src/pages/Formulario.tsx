@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { api } from 'lib/axios';
-import "../styles/loginemail.css";
+import "../styles/Formulario.css";
 import { useNavigate } from 'react-router-dom';
 import PasswordChecklist from 'react-password-checklist';
 
@@ -13,31 +13,20 @@ export const Formulario = () => {
   const [escondeBotao, setEscondeBotao] = useState(true);
   const navigate = useNavigate();
 
-
-
-  const notifyCadastroSucesso = (nome: string) =>
-  alert(`${nome}, seu cadastro foi realizado com sucesso`);
-
   const cadastrarUsuario = async (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
     const autenticarUsuario = async () => {
       setFazendoCadastro(true);
       try {
         const response = await api.post(`/usuario`, {
-          name: nomeCompleto,
+          nome: nomeCompleto,
           email: email,
           senha: senha,
           isAdmin: false,
           }
-          , {headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-            'Access-Control-Allow-Headers': 'content-type',
-            'content-type':'application/json'
-          }}
         );
         const data = await response.data;
-        notifyCadastroSucesso(data.name);
+        alert(`${nomeCompleto}, seu cadastro foi realizado com sucesso`);
         navigate("/Login");
       } catch (error: any) {
         console.log(error);
@@ -63,9 +52,9 @@ export const Formulario = () => {
           </div>
         </>
       ) : (
-        <div>
-          <div>
-            <form onSubmit={cadastrarUsuario}>
+        <div className='container-formulario'>
+          <div className='card-formulario'>
+            <form onSubmit={cadastrarUsuario} className='campos-formulario'>
               <h3>Criar uma conta</h3>
               <input
                 value={nomeCompleto}
@@ -122,7 +111,7 @@ export const Formulario = () => {
                   }
                 }}
               />
-              <button disabled={escondeBotao}>
+              <button disabled={escondeBotao} className='btn-formulario'>
                 Cadastrar
               </button>
             </form>
@@ -131,35 +120,4 @@ export const Formulario = () => {
       )}
     </>
   );
-
-
-  /*
-  const [formData, setFormData] = useState<IUsuario|null>(null);
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    try {
-      const response = await api.post('/usuario', formData);
-      console.log(response.data); // Faça algo com a resposta da API
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  return (
-    <div>
-      <h1>Formulário</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
-        <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        <input type="password" name="password" value={formData.password} onChange={handleChange} />
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  );
-  */
 };

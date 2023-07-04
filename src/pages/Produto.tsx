@@ -3,7 +3,7 @@ import { useAppDispatch } from "hooks";
 import { adicionarProduto } from "store/modules/carrinho";
 import { api } from "lib/axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../styles/produto.css"
   
 export const Produto = () => {
@@ -11,6 +11,7 @@ export const Produto = () => {
   const [produto, setProduto] = useState<IProduto|any>();
   const [qtde, setQtde] = useState(1);
   const { idProduto } = useParams();
+  const navigate = useNavigate();
 
   const incrementaQtde = (max:number) =>{
     if(max>=(qtde+1)){
@@ -60,7 +61,7 @@ export const Produto = () => {
           <button className="btn-produto" onClick={()=>diminuiQtde()}>-</button>
           
         </div>
-          <button className="btn-produto" onClick={()=> dispatch(adicionarProduto({
+          <button className="btn-produto" onClick={()=> {dispatch(adicionarProduto({
             id: produto.id,
             nome: produto.nome,
             descricao: produto.descricao,
@@ -69,7 +70,8 @@ export const Produto = () => {
             quantidade: produto.quantidade,
             categoriaId: produto.categoriaId,
             qtdeDesejada: qtde
-          }))}>
+          }));
+           navigate("/");}}>
               Adicionar</button>
         </div>
       </div>
