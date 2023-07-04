@@ -5,7 +5,7 @@ O objetivo principal do desafio é desenvolver uma loja virtual de sapatos. O si
 ## Links para o site
 
 Usamos a Vercel para hospedar a aplicação.
-
+https://gama-desafio-final-shoes-ecommerce.vercel.app/
 ## Autores
 
 Grupo 03
